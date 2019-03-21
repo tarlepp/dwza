@@ -2,6 +2,27 @@
     "doctrine/inflector": {
         "version": "v1.3.0"
     },
+    "eightpoints/guzzle-bundle": {
+        "version": "7.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "7.0",
+            "ref": "e5e657ce5a4ebc99f3c76916938aa0a5f8ef7736"
+        },
+        "files": [
+            "config/packages/eight_points_guzzle.yaml"
+        ]
+    },
+    "guzzlehttp/guzzle": {
+        "version": "6.3.3"
+    },
+    "guzzlehttp/promises": {
+        "version": "v1.3.1"
+    },
+    "guzzlehttp/psr7": {
+        "version": "1.5.2"
+    },
     "nikic/php-parser": {
         "version": "v4.2.1"
     },
@@ -11,11 +32,17 @@
     "psr/container": {
         "version": "1.0.0"
     },
+    "psr/http-message": {
+        "version": "1.0.1"
+    },
     "psr/log": {
         "version": "1.1.0"
     },
     "psr/simple-cache": {
         "version": "1.0.1"
+    },
+    "ralouphie/getallheaders": {
+        "version": "2.0.5"
     },
     "symfony/cache": {
         "version": "v4.2.4"
@@ -49,6 +76,9 @@
         "version": "v4.2.4"
     },
     "symfony/event-dispatcher": {
+        "version": "v4.2.4"
+    },
+    "symfony/expression-language": {
         "version": "v4.2.4"
     },
     "symfony/filesystem": {
@@ -120,6 +150,9 @@
             "config/packages/test/routing.yaml",
             "config/routes.yaml"
         ]
+    },
+    "symfony/stopwatch": {
+        "version": "v4.2.4"
     },
     "symfony/var-exporter": {
         "version": "v4.2.4"

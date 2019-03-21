@@ -2,6 +2,7 @@
 
 namespace App\Command;
 
+use App\Client\GoogleClient;
 use App\Service\SomeService;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -14,11 +15,14 @@ class TestCommand extends Command
 
     private $someService;
 
-    public function __construct(SomeService $someService)
+    private $googleClient;
+
+    public function __construct(SomeService $someService, GoogleClient $googleClient)
     {
         parent::__construct(self::$defaultName);
 
         $this->someService = $someService;
+        $this->googleClient = $googleClient;
     }
 
     protected function configure()
@@ -33,5 +37,9 @@ class TestCommand extends Command
         $parameterValue = $this->someService->getParameter('someParameter');
 
         $io->success('Your \'someParameter\' value is: ' . $parameterValue);
+
+        $response = $this->googleClient->search($parameterValue);
+
+        $io->success($response->getBody()->getContents());
     }
 }
